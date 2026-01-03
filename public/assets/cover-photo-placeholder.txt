@@ -1,0 +1,7 @@
+This is a placeholder for your cover photo.
+Please replace this file with your actual cover photo named 'cover-photo.jpg' or update the path in constants.tsx to match your image file name.
+
+Recommended image specifications:
+- Format: JPG, PNG, or WebP
+- Size: 400x400 pixels (square)
+- File size: Under 500KB for optimal loading
