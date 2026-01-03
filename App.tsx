@@ -25,19 +25,33 @@ const App: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Cover Photo */}
           <div className="mb-8 flex justify-center">
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-blue-500/30 shadow-2xl shadow-blue-500/20">
-              <img 
-                src={PERSONAL_INFO.coverPhoto} 
-                alt={PERSONAL_INFO.name}
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  // Fallback to a gradient if image fails to load
-                  const target = e.target as HTMLImageElement;
-                  target.style.display = 'none';
-                  target.parentElement!.classList.add('bg-gradient-to-br', 'from-blue-600', 'to-indigo-600', 'flex', 'items-center', 'justify-center');
-                  target.parentElement!.innerHTML = `<span class="text-white text-4xl font-bold">${PERSONAL_INFO.name.split(' ').map(n => n[0]).join('')}</span>`;
-                }}
-              />
+            <div className="relative">
+              {/* Outer glow ring */}
+              <div className="absolute inset-0 w-40 h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-xl animate-pulse"></div>
+              
+              {/* Space circle container */}
+              <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-2 backdrop-blur-sm border border-white/10">
+                {/* Inner photo circle */}
+                <div className="w-full h-full rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-500 to-purple-500 shadow-2xl shadow-blue-500/30">
+                  <img 
+                    src={PERSONAL_INFO.coverPhoto} 
+                    alt={PERSONAL_INFO.name}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    onError={(e) => {
+                      // Fallback to a gradient if image fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      target.parentElement!.classList.add('bg-gradient-to-br', 'from-blue-600', 'to-indigo-600', 'flex', 'items-center', 'justify-center');
+                      target.parentElement!.innerHTML = `<span class="text-white text-4xl font-bold">${PERSONAL_INFO.name.split(' ').map(n => n[0]).join('')}</span>`;
+                    }}
+                  />
+                </div>
+              </div>
+              
+              {/* Floating particles effect */}
+              <div className="absolute top-4 right-4 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
+              <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse"></div>
+              <div className="absolute top-8 left-2 w-1 h-1 bg-indigo-400 rounded-full animate-bounce"></div>
             </div>
           </div>
           
@@ -171,7 +185,7 @@ const App: React.FC = () => {
                 </div>
               </div>
               <div className="space-y-4 pt-4 border-t border-white/5">
-                <p className="text-slate-300"><span className="text-blue-400 font-bold">Online Ju Presence:</span> Codeforces, LightOJ, Leetcode, Spoj, Atcoder.</p>
+                <p className="text-slate-300"><span className="text-blue-400 font-bold">Online Judge Presence:</span> Codeforces, LightOJ, Leetcode, Spoj, Atcoder.</p>
                 <p className="text-slate-300"><span className="text-blue-400 font-bold">Contests:</span> Participated in 7+ national & regional level contests (NCPC, ICPC Preliminaries).</p>
               </div>
             </div>
@@ -251,7 +265,7 @@ const App: React.FC = () => {
 
       {/* Footer */}
       <footer className="pt-20 pb-10 px-4 text-center border-t border-white/5 mt-20">
-        <p className="text-slate-500 text-sm">© {new Date().getFullYear()} MD. Samrat Hossen. All Rights Reserved.</p>
+        <p className="text-slate-500 text-sm">© {new Date().getFullYear()} Samrat Hossen. All Rights Reserved.</p>
         <p className="text-xs text-slate-600 mt-2">Built with React, Tailwind, and Google Gemini API</p>
       </footer>
 
