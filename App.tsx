@@ -185,7 +185,7 @@ const App: React.FC = () => {
                 </div>
               </div>
               <div className="space-y-4 pt-4 border-t border-white/5">
-                <p className="text-slate-300"><span className="text-blue-400 font-bold">Online Judge Presence:</span> Codeforces, LightOJ, Leetcode, Spoj, Atcoder.</p>
+                <p className="text-slate-300"><span className="text-blue-400 font-bold">Online Judge Presence:</span> Codeforces, LightOJ, Uva, Leetcode, Spoj, Atcoder etc.</p>
                 <p className="text-slate-300"><span className="text-blue-400 font-bold">Contests:</span> Participated in 7+ national & regional level contests (NCPC, ICPC Preliminaries).</p>
               </div>
             </div>
@@ -214,6 +214,183 @@ const App: React.FC = () => {
         </div>
       </section>
 
+      {/* Academic Qualifications Section */}
+            <section id="academic" className="py-20 px-4 bg-[#0a0f1d]/50">
+              <div className="max-w-6xl mx-auto">
+                <div className="text-center mb-16">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4">Academic Qualifications</h2>
+                  <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                </div>
+                
+                {/* BSc Degree Card */}
+                <div className="flex justify-center">
+                  <div className="max-w-3xl w-full">
+                    <div className="glass-morphism rounded-3xl border border-white/10 overflow-hidden
+                                    hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10
+                                    transition-all duration-500 group">
+                      
+                      {/* Header with Gradient */}
+                      <div className="relative bg-gradient-to-br from-blue-600/20 via-indigo-600/20 to-purple-600/20 p-8 border-b border-white/10">
+                        {/* Decorative elements */}
+                        <div className="absolute top-0 right-0 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl"></div>
+                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl"></div>
+                        
+                        <div className="relative flex items-start gap-6">
+                          {/* Graduation Cap Icon */}
+                          <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 
+                                        flex items-center justify-center shadow-lg shadow-blue-500/30
+                                        group-hover:scale-110 transition-transform duration-300">
+                            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
+                            </svg>
+                          </div>
+                          
+                          <div className="flex-1">
+                            <div className="flex items-center gap-3 mb-2">
+                              <h3 className="text-2xl font-bold text-white">
+                                Bachelor of Science in Engineering
+                              </h3>
+                              <span className="px-3 py-1 rounded-full bg-green-500/20 border border-green-500/30 text-green-400 text-xs font-bold">
+                                Completed
+                              </span>
+                            </div>
+                            <p className="text-xl text-blue-300 font-semibold mb-1">
+                              Computer Science and Engineering
+                            </p>
+                            <p className="text-slate-400 text-sm">
+                              BSc [Eng.] in Computer Science & Engineering
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Body with Details */}
+                      <div className="p-8">
+                        {/* Institution, Degree, and CGPA in one line */}
+                        <div className="grid md:grid-cols-3 gap-6 mb-6">
+                          {/* Institution */}
+                          <div className="glass-morphism p-4 rounded-xl border border-white/5 hover:border-blue-500/30 transition-colors">
+                            <div className="flex items-center gap-3">
+                              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-indigo-500/20 flex items-center justify-center">
+                                <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                </svg>
+                              </div>
+                              <div>
+                                <p className="text-xs text-slate-500 uppercase font-bold">Institution</p>
+                                <p className="text-lg font-bold text-white">Comilla University</p>
+                                <p className="text-xs text-slate-400">Cumilla, Bangladesh</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Degree Type */}
+                          <div className="glass-morphism p-4 rounded-xl border border-white/5 hover:border-blue-500/30 transition-colors">
+                            <div className="flex items-center gap-3">
+                              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
+                                <svg className="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                                </svg>
+                              </div>
+                              <div>
+                                <p className="text-xs text-slate-500 uppercase font-bold">Degree</p>
+                                <p className="text-lg font-bold text-white">BSc Eng.</p>
+                                <p className="text-xs text-slate-400">Engineering</p>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          {/* CGPA */}
+                          <div className="glass-morphism p-4 rounded-xl border border-white/5 hover:border-blue-500/30 transition-colors">
+                            <div className="flex items-center gap-3">
+                              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center">
+                                <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                              </div>
+                              <div>
+                                <p className="text-xs text-slate-500 uppercase font-bold">CGPA</p>
+                                <p className="text-2xl font-black text-white">3.71</p>
+                                <p className="text-xs text-slate-400">out of 4.00</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        {/* Academic Highlights */}
+                        <div className="bg-white/5 rounded-xl p-6 border border-white/5">
+                          <h4 className="text-white font-bold mb-4 flex items-center gap-2">
+                            <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                            Academic Highlights
+                          </h4>
+                          <div className="space-y-3">
+                            <div className="flex items-start gap-3">
+                              <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0"></div>
+                              <p className="text-slate-300 text-sm leading-relaxed">
+                                Specialized in <span className="text-white font-semibold">Data Structures & Algorithms</span>, Software Engineering, and Database Management Systems
+                              </p>
+                            </div>
+                            <div className="flex items-start gap-3">
+                              <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0"></div>
+                              <p className="text-slate-300 text-sm leading-relaxed">
+                                Completed <span className="text-white font-semibold">comprehensive coursework</span> in Web Technologies, Object-Oriented Programming, and Computer Networks
+                              </p>
+                            </div>
+                            <div className="flex items-start gap-3">
+                              <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0"></div>
+                              <p className="text-slate-300 text-sm leading-relaxed">
+                                Active participant in <span className="text-white font-semibold">competitive programming</span> throughout academic tenure
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        {/* Certificate Download Section */}
+                        <div className="mt-6 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 rounded-xl p-6 border border-blue-500/20">
+                          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                            <div className="flex items-center gap-4">
+                              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/30">
+                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                              </div>
+                              <div>
+                                <h4 className="text-white font-bold text-lg">Official Certificate</h4>
+                                <p className="text-slate-400 text-sm">Download verified BSc degree certificate</p>
+                              </div>
+                            </div>
+                            <button
+                              onClick={() => {
+                                const link = document.createElement('a');
+                                link.href = '/assets/BSC_Certificate.pdf';
+                                link.download = 'Samrat_Hossen_BSC_Certificate.pdf';
+                                link.target = '_blank';
+                                document.body.appendChild(link);
+                                link.click();
+                                document.body.removeChild(link);
+                              }}
+                              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 
+                                       text-white px-6 py-3 rounded-xl font-bold transition-all transform hover:scale-105 
+                                       shadow-xl shadow-blue-500/30 flex items-center gap-2 group"
+                            >
+                              <svg className="w-5 h-5 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                              </svg>
+                              Download Certificate
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </section>
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
         <div className="max-w-4xl mx-auto glass-morphism p-12 rounded-3xl relative overflow-hidden">
