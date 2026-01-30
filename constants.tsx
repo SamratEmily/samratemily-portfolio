@@ -1,5 +1,5 @@
 
-import { Project, Achievement, Experience, SkillGroup } from './types';
+import { Project, Achievement, Experience, SkillGroup, PersonalProject } from './types';
 
 export const PERSONAL_INFO = {
   name: "MD. Samrat Hossen",
@@ -72,6 +72,30 @@ export const PROJECTS: Project[] = [
     technologies: ["WordPress", "PHP"],
     description: "Developed REST APIs to customize WooCommerce and Dokan for use in a Mobile App environment.",
     tools: ["Dokan","Postman"]
+  }
+];
+
+export const PersonalProjects: PersonalProject[] = [
+  {
+    title: "Profit Calculation for WooCommerce",
+    technologies: ["WordPress Plugin","HTML", "CSS", "JS", "PHP", "MySQL"],
+    description: "Created a WooCommerce plugin extention to calculate profit. Added an admin dashboard to see and export reports.",
+    tools: ["WooCommerce"],
+    link: "https://wordpress.org/plugins/samrat-profit-calculator-for-woocommerce/",
+  },
+  {
+    title: "Mail Tracker",
+    technologies: ["WordPress Plugin","HTML", "CSS", "JS", "PHP", "MySQL"],
+    description: "Created a plugin to track emails sent from WooCommerce, Wordpress which are triggered by wp_mail function.",
+    tools: ["Wordpress"],
+    link: "https://wordpress.org/plugins/samrat-emily-mail-tracker/",
+  },
+  {
+    title: "Donation Campaign Platform",
+    technologies: ["laravel","React.js", "Tailwind CSS"],
+    description: "It serves as a donation platform for non-profit organizations. It allows users to donate to various causes and organizations by maintaining campaign and donation history.",
+    tools: ["laravel","React.js"],
+    link: "https://github.com/samratEmily/donation/",
   }
 ];
 

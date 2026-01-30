@@ -3,7 +3,7 @@ import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import Navbar from './components/Navbar';
 import AiAssistant from './components/AiAssistant';
-import { PERSONAL_INFO, SKILLS, EXPERIENCES, PROJECTS, ACHIEVEMENTS, PROBLEM_SOLVING } from './constants';
+import { PERSONAL_INFO, SKILLS, EXPERIENCES, PROJECTS, ACHIEVEMENTS, PROBLEM_SOLVING, PersonalProjects } from './constants';
 
 const ContactForm: React.FC = () => {
   const [state, handleSubmit] = useForm("xkogdzbj");
@@ -135,7 +135,7 @@ const App: React.FC = () => {
   const handleDownloadResume = () => {
     // Create a link to download the actual PDF file
     const link = document.createElement('a');
-    link.href = '/assets/SamratResume.pdf';
+    link.href = '/assets/Samrat_Hossen.pdf';
     link.download = 'Samrat_Hossen_Resume.pdf';
     link.target = '_blank';
     document.body.appendChild(link);
@@ -264,7 +264,7 @@ const App: React.FC = () => {
       <section id="projects" className="py-20 px-4 bg-[#0a0f1d]/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Professonal Projects</h2>
             <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -283,6 +283,51 @@ const App: React.FC = () => {
                     ))}
                   </div>
                   <p className="text-slate-400 text-sm mb-6 flex-1">{proj.description}</p>
+                  {proj.tools && (
+                    <div className="text-[11px] text-slate-500 italic mt-auto border-t border-white/5 pt-3">
+                      Used tools: {proj.tools.join(', ')}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/*Personal Projects */}
+      <section id='personal_projects' className>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Personal Projects</h2>
+            <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {PersonalProjects.map((proj, idx) => (
+              <div key={idx} className="glass-morphism rounded-2xl overflow-hidden hover:translate-y-[-8px] transition-all flex flex-col border border-white/10">
+                {/* <div className="h-48 bg-gradient-to-br from-blue-900/40 to-indigo-900/40 flex items-center justify-center border-b border-white/5">
+                  <div className="text-4xl font-bold text-white/20 uppercase tracking-widest">{proj.title[0]}</div>
+                </div> */}
+                <div className="p-6 flex-1 flex flex-col">
+                  <h3 className="text-xl font-bold mb-2 text-white">{proj.title}</h3>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {proj.technologies.map((tech, i) => (
+                      <span key={i} className="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 uppercase tracking-tighter">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="text-slate-400 text-sm mb-6 flex-1">{proj.description}</p>
+                  {proj.link && (
+                    <a
+                      href={proj.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors mb-5"
+                    >
+                      View →
+                    </a>
+                  )}
                   {proj.tools && (
                     <div className="text-[11px] text-slate-500 italic mt-auto border-t border-white/5 pt-3">
                       Used tools: {proj.tools.join(', ')}
