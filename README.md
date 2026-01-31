@@ -36,7 +36,7 @@ liveProjectUrl: "https://your-actual-portfolio-url.com"
 ```
 
 ### 5. Resume PDF
-Your resume PDF is located at `public/assets/SamratResume.pdf` and will be downloadable via the "Download Resume" button.
+Your resume PDF is located at `public/assets/Samrat_Hossen.pdf` and will be downloadable via the "Download Resume" button.
 
 ## Development
 
