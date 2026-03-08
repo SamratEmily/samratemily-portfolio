@@ -44,6 +44,12 @@ export const EXPERIENCES: Experience[] = [
 
 export const PROJECTS: Project[] = [
   {
+    title: "FajrFair - Online Books Store",
+    technologies: ["HTML", "CSS", "JS", "PHP", "MySQL"],
+    description: "Turned a Figma design into a functional multi-page e-commerce bookstore with smooth browsing and easy checkout.",
+    tools: ["Figma", "WooCommerce"],
+  },
+  {
     title: "SoHa-Living",
     technologies: ["WordPress", "PHP"],
     description: "Built numerous REST APIs for project management, HR management, and Portfolio management.",
@@ -56,12 +62,6 @@ export const PROJECTS: Project[] = [
     tools: ["Woocommerce","Dokan","vue-html2pdf"]
   },
   {
-    title: "FajrFair - Online Books Store",
-    technologies: ["HTML", "CSS", "JS", "PHP", "MySQL"],
-    description: "Turned a Figma design into a functional multi-page e-commerce bookstore with smooth browsing and easy checkout.",
-    tools: ["Figma", "WooCommerce"]
-  },
-  {
     title: "Vengo",
     technologies: ["WordPress", "PHP"],
     description: "Customized automated financial tools, flexible coupon management, and cron job schedulers for WooCommerce and Dokan.",
@@ -72,10 +72,37 @@ export const PROJECTS: Project[] = [
     technologies: ["WordPress", "PHP"],
     description: "Developed REST APIs to customize WooCommerce and Dokan for use in a Mobile App environment.",
     tools: ["Dokan","Postman"]
+  },
+  {
+    title: "Bazaarica-Kozmetica",
+    technologies: ["WordPress", "PHP"],
+    description: "Extended lots of features based on WooCommerce and dokan Plugins.",
+    tools: ["Dokan","WooCommerce"]
   }
 ];
 
 export const PersonalProjects: PersonalProject[] = [
+  {
+    title: "Mail Tracker",
+    technologies: ["WordPress Plugin","HTML", "CSS", "JS", "PHP", "MySQL"],
+    description: "Created a plugin to track emails sent from WooCommerce, Wordpress which are triggered by wp_mail function.",
+    tools: ["Wordpress"],
+    link: "https://wordpress.org/plugins/samrat-emily-mail-tracker/",
+  },
+  {
+    title: "Website Cache Plugin",
+    technologies: ["WordPress Plugin","HTML", "CSS", "JS", "PHP", "MySQL"],
+    description: "Created a simple lightweight plugin to cache Pages, minifying html css js.",
+    tools: ["WordPress"],
+    link: "https://github.com/samratEmily/samrat-website-cache/",
+  },
+  {
+    title: "URL Blocker/Redirect",
+    technologies: ["WordPress Plugin","HTML", "CSS", "JS", "PHP", "MySQL"],
+    description: "Created a simple lightweight plugin to block or redirect any specific ULR.",
+    tools: ["WordPress"],
+    link: "https://github.com/samratEmily/url-blocker/",
+  },
   {
     title: "Profit Calculation for WooCommerce",
     technologies: ["WordPress Plugin","HTML", "CSS", "JS", "PHP", "MySQL"],
@@ -83,12 +110,13 @@ export const PersonalProjects: PersonalProject[] = [
     tools: ["WooCommerce"],
     link: "https://wordpress.org/plugins/samrat-profit-calculator-for-woocommerce/",
   },
+  
   {
-    title: "Mail Tracker",
-    technologies: ["WordPress Plugin","HTML", "CSS", "JS", "PHP", "MySQL"],
-    description: "Created a plugin to track emails sent from WooCommerce, Wordpress which are triggered by wp_mail function.",
-    tools: ["Wordpress"],
-    link: "https://wordpress.org/plugins/samrat-emily-mail-tracker/",
+    title: "Sohoj Biye",
+    technologies: ["laravel","React.js", "Tailwind CSS"],
+    description: "It serves as a marriage helper website with a strong privacy and verification",
+    tools: ["laravel","React.js"],
+    link: "https://github.com/samratEmily/sohoj-biye/",
   },
   {
     title: "Donation Campaign Platform",

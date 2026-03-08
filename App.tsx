@@ -189,7 +189,7 @@ const App: React.FC = () => {
             I build <span className="text-gradient">high-performance</span> digital products.
           </h1>
           <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Hi, I'm <span className="text-white font-semibold">Samrat Hossen</span>. A Software Engineer at weLabs specializing in WordPress ecosystems, complex backend architecture, and modern JavaScript.
+            Hi, I'm <span className="text-white font-semibold">Samrat Hossen</span>. A Software Engineer specializing in WordPress ecosystems, complex backend architecture, and modern JavaScript.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button
