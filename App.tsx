@@ -209,30 +209,6 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section id="skills" className="py-20 px-4 bg-[#0a0f1d]/50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Technical Expertise</h2>
-            <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {SKILLS.map((skill, idx) => (
-              <div key={idx} className="glass-morphism p-6 rounded-2xl hover:border-blue-500/50 transition-all group">
-                <h3 className="text-blue-400 font-bold mb-4 uppercase tracking-wider text-xs">{skill.category}</h3>
-                <div className="flex flex-wrap gap-2">
-                  {skill.items.map((item, i) => (
-                    <span key={i} className="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-slate-300 group-hover:bg-white/10 transition-colors">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Experience Section */}
       <section id="experience" className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
@@ -253,6 +229,30 @@ const App: React.FC = () => {
                     <span className="text-sm text-slate-500 bg-white/5 px-3 py-1 rounded-full">{exp.duration}</span>
                   </div>
                   <p className="text-slate-400 leading-relaxed">{exp.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+            {/* Skills Section */}
+      <section id="skills" className="py-20 px-4 bg-[#0a0f1d]/50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Technical Expertise</h2>
+            <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {SKILLS.map((skill, idx) => (
+              <div key={idx} className="glass-morphism p-6 rounded-2xl hover:border-blue-500/50 transition-all group">
+                <h3 className="text-blue-400 font-bold mb-4 uppercase tracking-wider text-xs">{skill.category}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {skill.items.map((item, i) => (
+                    <span key={i} className="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm text-slate-300 group-hover:bg-white/10 transition-colors">
+                      {item}
+                    </span>
+                  ))}
                 </div>
               </div>
             ))}

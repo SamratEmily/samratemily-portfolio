@@ -19,10 +19,10 @@ npm install
 ```
 
 ### 2. Environment Configuration
-The Gemini API key is already configured in `.env.local`:
-```
-VITE_GEMINI_API_KEY=REMOVED_API_KEY
-```
+The AI assistant calls Gemini from a Netlify Function (`netlify/functions/ask.ts`), so the API key never reaches the browser. Never put it in a `VITE_*` variable or commit it.
+
+- **Production:** in Netlify → Site configuration → Environment variables, set `GEMINI_API_KEY` (and optionally `GEMINI_MODEL`, default `gemini-2.5-flash`).
+- **Local:** create `.env` (git-ignored) with `GEMINI_API_KEY=your-key`, then run `npx netlify dev` instead of `npm run dev` so `/api/ask` is served.
 
 ### 3. Add Your Cover Photo
 - Place your cover photo in `public/assets/` directory
@@ -32,7 +32,7 @@ VITE_GEMINI_API_KEY=REMOVED_API_KEY
 ### 4. Update Live Project URL
 In `constants.tsx`, update the `liveProjectUrl` field:
 ```typescript
-liveProjectUrl: "https://your-actual-portfolio-url.com"
+liveProjectUrl: "https://samratemily.netlify.app/"
 ```
 
 ### 5. Resume PDF
@@ -75,5 +75,3 @@ npm run build
 - Google Gemini AI API
 
 ---
-
-View your app in AI Studio: https://ai.studio/apps/temp/1

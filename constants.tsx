@@ -17,28 +17,40 @@ export const PERSONAL_INFO = {
 export const SKILLS: SkillGroup[] = [
   {
     category: "Programming Languages",
-    items: ["C", "C++", "PHP", "MySQL", "JavaScript", "TypeScript"]
+    items: ["C", "C++", "PHP", "Java", "Python"]
   },
   {
     category: "Frameworks & Libraries",
-    items: ["React.js", "Vue.js", "Laravel", "Tailwind CSS"]
+    items: ["React.js", "Vue.js", "Laravel", "Tailwind CSS", "TypeScript"]
   },
   {
     category: "Web Technologies",
-    items: ["HTML5", "CSS3", "REST APIs", "JSON", "Ajax"]
+    items: ["HTML5", "CSS3", "REST APIs", "JSON", "Ajax", "Bootstrap"]
   },
   {
     category: "CMS & Platforms",
-    items: ["WordPress", "WooCommerce", "Dokan", "WePos"]
+    items: ["WordPress", "Shopify","Joomla", "Drupal", "Magento"]
   }
 ];
 
 export const EXPERIENCES: Experience[] = [
   {
-    role: "WordPress Developer",
+    role: "Software Engineer",
+    company: "Beacon Soft Ltd.",
+    duration: "April 2026 – Present",
+    description: "Specializing in POS system, Full Stack Project, WordPress plugin development, backend customization, and high-performance API integration for enterprise-level products."
+  },
+  {
+    role: "Software Engineer",
     company: "weLabs Ltd. (Sister Concern of weDevs Ltd.)",
-    duration: "May 2024 – Present",
+    duration: "July 2025 – March 2026",
     description: "Specializing in WordPress plugin development, backend customization, and high-performance API integration for enterprise-level products like Dokan and WePos."
+  },
+  {
+    role: "Junior Software Engineer",
+    company: "weLabs Ltd. (Sister Concern of weDevs Ltd.)",
+    duration: "May 2024 – June 2025",
+    description: "Specializing in WordPress plugin development, theme development, and backend customization for enterprise-level products."
   }
 ];
 
@@ -83,6 +95,34 @@ export const PROJECTS: Project[] = [
 
 export const PersonalProjects: PersonalProject[] = [
   {
+    title: "Journalist Portfolio",
+    technologies: ["WordPress Plugin","HTML", "CSS", "JS", "PHP", "MySQL"],
+    description: "Created a customized plugin to manage stories, awards, photos and videos.",
+    tools: ["Wordpress"],
+    link: "https://www.mdjahidul.com/",
+  },
+  {
+    title: "Laundry POS system",
+    technologies: ["Laravel","ReactJS", "TailwindCSS", "MySQL"],
+    description: "Created a Laravel-based POS system to manage laundry operations.",
+    tools: ["Laravel","ReactJS", "TailwindCSS", "MySQL"],
+    link: "https://github.com/SamratEmily/laundry-pos-system/",
+  },
+  {
+    title: "Social Media-Facebook clone",
+    technologies: ["Laravel","ReactJS", "TailwindCSS", "MySQL"],
+    description: "Created a Laravel-based social media platform.",
+    tools: ["Laravel","ReactJS", "TailwindCSS", "MySQL"],
+    link: "https://github.com/SamratEmily/buddy-script/",
+  },
+   {
+    title: "PathGuard Redirects",
+    technologies: ["WordPress Plugin","HTML", "CSS", "JS", "PHP", "MySQL"],
+    description: "PathGuard Redirects is a robust WordPress plugin designed to give administrators full control over URL management, including redirection, blocking, and path modification.",
+    tools: ["WordPress"],
+    link: "https://github.com/samratEmily/url-blocker/",
+  },
+  {
     title: "Mail Tracker",
     technologies: ["WordPress Plugin","HTML", "CSS", "JS", "PHP", "MySQL"],
     description: "Created a plugin to track emails sent from WooCommerce, Wordpress which are triggered by wp_mail function.",
@@ -95,13 +135,6 @@ export const PersonalProjects: PersonalProject[] = [
     description: "Created a simple lightweight plugin to cache Pages, minifying html css js.",
     tools: ["WordPress"],
     link: "https://github.com/samratEmily/samrat-website-cache/",
-  },
-  {
-    title: "URL Blocker/Redirect",
-    technologies: ["WordPress Plugin","HTML", "CSS", "JS", "PHP", "MySQL"],
-    description: "Created a simple lightweight plugin to block or redirect any specific ULR.",
-    tools: ["WordPress"],
-    link: "https://github.com/samratEmily/url-blocker/",
   },
   {
     title: "Profit Calculation for WooCommerce",
