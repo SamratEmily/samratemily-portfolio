@@ -1,13 +1,17 @@
 import { PERSONAL_INFO } from "../constants";
+import type { ChatMessage } from "../types";
 
-const FALLBACK = "The AI assistant is currently resting. Please contact me directly via email at " + PERSONAL_INFO.email + "!";
+// Odd count keeps the window starting on a user turn (history alternates and ends with the user); the server allows 20
+const HISTORY_WINDOW = 19;
 
-export async function askAssistant(prompt: string): Promise<string> {
+const FALLBACK ="The AI assistant is currently resting. Please contact me directly via email at " + PERSONAL_INFO.email + "!";
+
+export async function askAssistant(messages: ChatMessage[]): Promise<string> {
   try {
     const res = await fetch("/api/ask", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ prompt }),
+      body: JSON.stringify({ messages: messages.slice(-HISTORY_WINDOW) }),
     });
     if (!res.ok) return FALLBACK;
 

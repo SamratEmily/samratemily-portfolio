@@ -1,7 +1,17 @@
-/* Custom styles for the portfolio */
-body {
-  font-family: 'Inter', sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
   scroll-behavior: smooth;
+  /* Keep anchored section headings clear of the fixed navbar */
+  scroll-padding-top: 4rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 .glass-morphism {
@@ -15,11 +25,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-/* Smooth animations */
-* {
-  transition: all 0.2s ease-in-out;
 }
 
 /* Custom scrollbar */

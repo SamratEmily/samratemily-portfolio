@@ -1,77 +1,70 @@
 # MD. Samrat Hossen - Portfolio
 
-A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS, featuring an AI assistant powered by Google Gemini API.
+A responsive portfolio website built with React, TypeScript, Tailwind CSS and Vite, featuring an AI career assistant powered by the Google Gemini API.
+
+Live: https://samratemily.netlify.app/
 
 ## Features
 
-- **Responsive Design**: Optimized for all devices
-- **PDF Resume Download**: Direct download of resume PDF
-- **AI Assistant**: Interactive chat powered by Google Gemini API
-- **Modern UI**: Glass morphism design with smooth animations
-- **Cover Photo Support**: Professional profile image display
-- **Live Project Link**: Direct link to deployed portfolio
+- **Responsive design** for phones, tablets and desktops
+- **Resume and certificate downloads**
+- **AI career assistant** that answers questions about my experience, served through a Netlify Function so the API key stays server-side
+- **Contact form** via Formspree
 
-## Setup Instructions
+## Project Structure
 
-### 1. Install Dependencies
+```
+App.tsx                    Page layout and sections
+components/                Navbar, ContactForm, ProjectCard, AiAssistant, ...
+constants.ts               All portfolio content (experience, projects, skills, education)
+types.ts                   Shared TypeScript types
+services/geminiService.ts  Browser client for the assistant endpoint
+netlify/functions/ask.ts   Serverless function that calls Gemini (POST /api/ask)
+public/assets/             Resume, certificate and profile photo
+```
+
+To update content, edit `constants.ts`. The page and the AI assistant both read from it.
+
+## Setup
+
 ```bash
 npm install
 ```
 
-### 2. Environment Configuration
-The AI assistant calls Gemini from a Netlify Function (`netlify/functions/ask.ts`), so the API key never reaches the browser. Never put it in a `VITE_*` variable or commit it.
+### Environment variables
 
-- **Production:** in Netlify → Site configuration → Environment variables, set `GEMINI_API_KEY` (and optionally `GEMINI_MODEL`, default `gemini-2.5-flash`).
-- **Local:** create `.env` (git-ignored) with `GEMINI_API_KEY=your-key`, then run `npx netlify dev` instead of `npm run dev` so `/api/ask` is served.
+The Gemini API key is only read by the Netlify Function. Never put it in a `VITE_*` variable or commit it.
 
-### 3. Add Your Cover Photo
-- Place your cover photo in `public/assets/` directory
-- Name it `cover-photo.jpg` (or update the path in `constants.tsx`)
-- Recommended size: 400x400 pixels
+| Variable | Where | Required |
+| --- | --- | --- |
+| `GEMINI_API_KEY` | Netlify → Site configuration → Environment variables | Yes |
+| `GEMINI_MODEL` | Same place; defaults to `gemini-2.5-flash` | No |
 
-### 4. Update Live Project URL
-In `constants.tsx`, update the `liveProjectUrl` field:
-```typescript
-liveProjectUrl: "https://samratemily.netlify.app/"
-```
-
-### 5. Resume PDF
-Your resume PDF is located at `public/assets/Samrat_Hossen.pdf` and will be downloadable via the "Download Resume" button.
+For local development, put them in a `.env` file (git-ignored).
 
 ## Development
 
 ```bash
-npm run dev
+npx netlify dev   # site + /api/ask function (needs GEMINI_API_KEY in .env)
+npm run dev       # site only; the assistant shows its fallback message
 ```
 
-## Build for Production
+## Scripts
 
 ```bash
-npm run build
+npm run typecheck  # strict TypeScript check
+npm run build      # typecheck + production build to dist/
+npm run preview    # serve the production build
 ```
 
-## Features Implemented
+## Deployment
 
-✅ **PDF Resume Download**: Connected to actual PDF file  
-✅ **Gemini AI Integration**: Working AI assistant with your API key  
-✅ **Cover Photo Support**: Ready for your profile image  
-✅ **Live Project Link**: Button ready for your deployed URL  
-✅ **Responsive Design**: Works on all devices  
-✅ **Modern UI**: Professional portfolio design  
-
-## Next Steps
-
-1. Add your cover photo to `public/assets/cover-photo.jpg`
-2. Update the live project URL in `constants.tsx`
-3. Deploy to your preferred hosting platform
-4. Test the AI assistant functionality
+Netlify reads `netlify.toml`: it builds with `npm run build`, publishes `dist/`, and deploys the functions in `netlify/functions/`.
 
 ## Tech Stack
 
-- React 19
-- TypeScript
-- Tailwind CSS
+- React 19, TypeScript
+- Tailwind CSS 3 (compiled at build time)
 - Vite
-- Google Gemini AI API
-
----
+- Netlify Functions + Google Gemini API (`@google/genai`)
+- Formspree
